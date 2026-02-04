@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Public Exposure Scanner</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="terminal">
+    <h1 class="title">Public Exposure Scanner</h1>
+
+    <section class="controls">
+      <div class="input-row">
+        <label>Email (breach check)</label>
+        <input id="emailInput" placeholder="you@example.com" />
+        <button id="checkEmailBtn">Check</button>
+      </div>
+
+      <div class="input-row">
+        <label>Username (global)</label>
+        <input id="usernameInput" placeholder="username" />
+        <button id="checkUserBtn">Scan</button>
+      </div>
+
+      <div class="input-row">
+        <label>Domain (site tech)</label>
+        <input id="domainInput" placeholder="example.com" />
+        <button id="checkDomainBtn">Scan</button>
+      </div>
+
+      <div class="input-row small">
+        <label>Company domain (email discovery)</label>
+        <input id="companyInput" placeholder="company.com" />
+        <button id="companyBtn">Find</button>
+      </div>
+    </section>
+
+    <section class="fake-loading" id="loading" aria-hidden="true">
+      <div class="loading-bar">
+        <div class="loading-progress" id="loadingProgress"></div>
+      </div>
+      <ul class="steps" id="steps">
+        <li>[+] Accessing public records...</li>
+        <li>[+] Checking breach databases...</li>
+        <li>[+] Correlating identity traces...</li>
+      </ul>
+    </section>
+
+    <section id="results" class="results" aria-live="polite"></section>
+
+    <footer class="legal">
+      <p>For educational & awareness use only. We use public data and APIs. See <a href="terms.html">Terms</a> & <a href="privacy.html">Privacy Policy</a>.</p>
+    </footer>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>
